@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BizPro – About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">BizPro</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html#hero">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Get Started</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section id="hero" class="hero-v2">
+  <div class="overlay"></div>
+  <div class="container text-center hero-content">
+    <h1 class="fw-bold">Know More About Us</h1>
+    <p class="mt-3">We provide modern solutions for businesses of all sizes.</p>
+    <a href="contact.html" class="btn btn-primary mt-3 px-4 py-2">Contact Us</a>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6" data-aos="fade-right">
+        <img src="assets/images/business.jpg" class="img-fluid rounded shadow" alt="Our Team">
+      </div>
+      <div class="col-md-6" data-aos="fade-left">
+        <h2 class="fw-bold">About Our Company</h2>
+        <p class="text-muted mt-3">
+          We are dedicated to delivering modern business solutions. Our team is professional, creative, and ready to help you grow your business.
+        </p>
+        <a href="contact.html" class="btn btn-primary mt-3 px-4 py-2">Get In Touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer-section py-5">
+  <div class="container">
+    <div class="row align-items-center text-center text-md-start">
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h4 class="fw-bold mb-2">BizPro</h4>
+        <p class="text-white-50 mb-0">Modern Business Template</p>
+      </div>
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h6 class="fw-bold mb-3 text-white">Quick Links</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 text-center text-md-end">
+  <h6 class="fw-bold mb-3 text-white">Follow Us</h6>
+  <a href="https://www.facebook.com/YourPage" target="_blank" class="social-icon me-3">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://twitter.com/YourProfile" target="_blank" class="social-icon me-3">
+    <i class="fab fa-twitter"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/YourProfile" target="_blank" class="social-icon me-3">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+  <a href="https://www.instagram.com/YourProfile" target="_blank" class="social-icon">
+    <i class="fab fa-instagram"></i>
+  </a>
+</div>
+
+    </div>
+    <hr class="my-4 border-white-25">
+    <div class="text-center text-white-50">© 2026 BizPro. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+
+  // Navbar scroll effect
+  window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    if(window.scrollY > 50) navbar.classList.add('shrink');
+    else navbar.classList.remove('shrink');
+  });
+</script>
+
+</body>
+</html>

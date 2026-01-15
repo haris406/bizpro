@@ -1,0 +1,228 @@
+/* ================= HERO SECTION ================= */
+.hero-v2 {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../images/business.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-v2 .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.35);
+  z-index: 1;
+}
+
+.hero-v2::before {
+  content:"";
+  position:absolute;
+  top:0; left:0; width:100%; height:100%;
+  background: inherit;
+  animation: heroZoom 20s infinite alternate;
+  z-index:0;
+}
+
+@keyframes heroZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+.hero-v2 .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.hero-v2 .hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  animation: fadeInText 1.5s ease forwards;
+}
+
+.hero-v2 .hero-content p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+
+.hero-v2 .hero-content .btn {
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.hero-v2 .hero-content .btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInText {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* ================= NAVBAR ================= */
+#navbar {
+  background: transparent;
+  transition: all 0.5s ease;
+  padding: 20px 0;
+}
+#navbar.shrink {
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  padding: 10px 0;
+}
+/* Navbar text color - default white */
+#navbar .nav-link, #navbar .navbar-brand {
+  color: #fff;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+/* Navbar text color on scroll - black */
+#navbar.shrink .nav-link, #navbar.shrink .navbar-brand {
+  color: #000;
+}
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* ================= SERVICES ================= */
+.service-box {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 15px;
+  background: #fff;
+}
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+.service-box i {
+  color: #4f9cfb;
+  font-size: 2.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.service-box:hover i {
+  transform: scale(1.2);
+  color: #8e44ad;
+}
+
+/* ================= TESTIMONIALS ================= */
+.testimonial-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.testimonial-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+
+/* ================= CTA ================= */
+.cta-section {
+  background: linear-gradient(135deg, #4f9cfb, #8e44ad);
+  border-radius: 16px;
+  padding: 100px 20px;
+  margin: 60px 0;
+  color: #fff;
+  text-align: center;
+}
+.btn-cta {
+  background-color: #fff;
+  color: #4f9cfb;
+  font-weight: 700;
+  padding: 15px 35px;
+  border-radius: 50px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+.btn-cta:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+.btn-cta-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  padding: 15px 35px;
+  transition: all 0.3s ease;
+}
+.btn-cta-outline:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-5px);
+}
+@keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+.btn-cta.pulse { animation: pulse 2s infinite; }
+
+/* ================= FOOTER ================= */
+.footer-section {
+  background: #1f2a48;
+  border-radius: 20px 20px 0 0;
+  color: #fff;
+}
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.footer-section a:hover { color: #4f9cfb; }
+.footer-links li { margin-bottom: 8px; }
+.footer-section hr { border-color: rgba(255,255,255,0.2); }
+.social-icon i { font-size: 20px; transition: transform 0.3s ease; }
+.social-icon:hover i { transform: scale(1.3); color: #4f9cfb; }
+
+@media (max-width: 768px) {
+  .footer-section .text-md-start, .footer-section .text-md-end { text-align: center !important; }
+}
+
+/* ================= CONTACT FORM ================= */
+#contact form .form-control {
+  border-radius: 50px;
+  padding: 15px 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+#contact form .form-control:focus {
+  border-color: #4f9cfb;
+  box-shadow: 0 5px 15px rgba(79,156,251,0.3);
+}
+
+#contact form button.btn-cta {
+  font-weight: 700;
+  border-radius: 50px;
+  padding: 15px 35px;
+  background-color: #4f9cfb;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+#contact form button.btn-cta:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Success Message */
+#successMessage {
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 500;
+}
